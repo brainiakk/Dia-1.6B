@@ -9,3 +9,8 @@ text = "[S1] Dia is an open weights text to dialogue model. [S2] You get full co
 output = model.generate(text)
 
 sf.write("simple.mp3", output, 44100)
+
+# Voice Cloning
+# You should put the transcript of the voice you want to clone
+# Cogman: "No, he's going to die. I was making the moment more epic. Leprechauns are tiny, green, and Irish, and that is offensive. No, he's going to die. Will explain everything if you'll kindly come with me. Yes, my lord, like making beds. Or cooking food, polishing the silver. I am trying, my lord. Prefer the word sociopath.Clear for now. Hands off. There is a time and a place for everything. This is not the time, nor the place.",
+# Jarvis: "accessing alarm and interface settings in this window you can set up your customized greeting and alarm preferences the world needs your expertise or at least your presence launching a series of displays to help guide you"
