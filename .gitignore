@@ -1,1 +1,22 @@
 .DS_Store
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+.gradio
+
+**/*.pth
+**/*.mp3
+!example_prompt.mp3
+**/*.txt
+
+.ruff_cache
+.ipynb_checkpoints
+config.json

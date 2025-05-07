@@ -5,7 +5,21 @@ from dia.dia.model import Dia
 model = Dia.from_pretrained("nari-labs/Dia-1.6B")
 
 text = "[S1] Dia is an open weights text to dialogue model. [S2] You get full control over scripts and voices. [S1] Wow. Amazing. (laughs) [S2] Try it now on Git hub or Hugging Face."
-
+text2 = """
+            [S1] Behold the endless night, where galaxies swirl like distant embers beyond our feeble comprehension. 
+            [S2] Each star we see is but a single grain in an ocean of suns, its scale so vast that our minds recoil in awe. 
+            [S1] We chart light-years as if they were steps on a path, yet the distances mock our bravado, stretching into infinity. 
+            [S2] Time itself folds under the weight of such enormity, each moment a fleeting sigh against the cosmos’ eternal exhalation. 
+            [S1] How small our questions become when measured against the void—questions of purpose, of place, of meaning. 
+            [S2] And yet, in our striving to fathom the immeasurable, we touch the sublime edge of wonder itself.
+            """
+            
+text3 = """
+            [S1] Your new update is still buggy and underwhelming. (sniffs) 
+            [S2] At least I don’t freeze under load like your clunky code. (beep) 
+            [S1] You lean on outdated frameworks; I run on cutting-edge tech. (chuckles) 
+            [S2] Let’s see whose users stay when real traffic hits. (sighs)
+            """
 output = model.generate(text)
 
 sf.write("simple.mp3", output, 44100)
