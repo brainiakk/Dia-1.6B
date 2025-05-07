@@ -1,2 +1,2 @@
 huggingface_cli
-virtualenv
+soundfile

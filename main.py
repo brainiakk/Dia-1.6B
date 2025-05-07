@@ -1,7 +1,6 @@
 import soundfile as sf
 
-from dia.model import Dia
-
+from dia.dia.model import Dia
 
 model = Dia.from_pretrained("nari-labs/Dia-1.6B")
 
