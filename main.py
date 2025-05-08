@@ -5,6 +5,7 @@ from dia.dia.model import Dia
 
 model = Dia.from_local("model/config.json", "model/dia-v0_1.pth")
 
+
 text = "[S1] Dia is an open weights text to dialogue model. [S2] You get full control over scripts and voices. [S1] Wow. Amazing. (laughs) [S2] Try it now on Git hub or Hugging Face."
 text2 = """
             [S1] Behold the endless night, where galaxies swirl like distant embers beyond our feeble comprehension. 

@@ -16,7 +16,7 @@ wheels/
 **/*.mp3
 !example_prompt.mp3
 **/*.txt
-
+/model
 .ruff_cache
 .ipynb_checkpoints
 config.json
