@@ -1,2 +1,2 @@
-huggingface_cli
+"huggingface_hub[cli]"
 soundfile
