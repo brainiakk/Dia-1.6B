@@ -25,8 +25,8 @@ text3 = """
             
 def tts(text):
     output = model.generate(text, verbose=True)
-    sf.write("simple_tts.wav", output, 44100)
-    play("simple_tts.wav")
+    sf.write("simple_tts.mp3", output, 44100)
+    # play("simple_tts.mp3")
 
 
 
@@ -36,8 +36,14 @@ def tts(text):
 # Jarvis: "accessing alarm and interface settings in this window you can set up your customized greeting and alarm preferences the world needs your expertise or at least your presence launching a series of displays to help guide you"
 # Ultron: "Captain America, God's righteous man, pretending you could live without a war. I can't physically throw up in my mouth? I'm glad you asked that because I wanted to take this time to explain my evil plan."
 
-def clone_voice(text):
-    pass
+def clone_voice(text: str, audio_transcript: str, audio_file: str):
+
+    # It will only return the audio from the text_to_generate
+    output = model.generate(
+        audio_transcript + text, audio_prompt=audio_file, verbose=True
+    )
+
+    model.save_audio("voice_clone.mp3", output)
     
 def play(temp_audio_file):
     pygame.mixer.quit()
@@ -54,4 +60,7 @@ def play(temp_audio_file):
 
     # os.remove(temp_audio_file)
     
-tts(text)
+# tts(text)
+
+audio_transcript = "[S1] accessing alarm and interface settings in this window you can set up your customized greeting and alarm preferences the world needs your expertise or at least your presence launching a series of displays to help guide you. [S2] Captain America, God's righteous man, pretending you could live without a war. I can't physically throw up in my mouth? I'm glad you asked that because I wanted to take this time to explain my evil plan."
+clone_voice(text3, audio_transcript, "jarvis-ultron.mp3")
