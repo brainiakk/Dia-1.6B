@@ -3,7 +3,7 @@ import soundfile as sf
 
 from dia.dia.model import Dia
 
-model = Dia.from_pretrained("nari-labs/Dia-1.6B", compute_dtype="float16")
+model = Dia.from_pretrained("nari-labs/Dia-1.6B", compute_dtype="float32")
 
 
 text = "[S1] Dia is an open weights text to dialogue model. [S2] You get full control over scripts and voices. [S1] Wow. Amazing. (laughs) [S2] Try it now on Git hub or Hugging Face."
@@ -24,9 +24,9 @@ text3 = """
             """
             
 def tts(text):
-    output = model.generate(text)
-    sf.write("simple_tts.mp3", output, 44100)
-    play("simple_tts.mp3")
+    output = model.generate(text, verbose=True)
+    sf.write("simple_tts.wav", output, 44100)
+    play("simple_tts.wav")
 
 
 
