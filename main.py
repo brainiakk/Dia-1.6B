@@ -15,14 +15,9 @@ text2 = """
             [S1] How small our questions become when measured against the void—questions of purpose, of place, of meaning. 
             [S2] And yet, in our striving to fathom the immeasurable, we touch the sublime edge of wonder itself.
             """
-            
-text3 = """
-            [S1] Your new update is still buggy and underwhelming. (sniffs) 
-            [S2] At least I don’t freeze under load like your clunky code. (beep) 
-            [S1] You lean on outdated frameworks; I run on cutting-edge tech. (chuckles) 
-            [S2] Let’s see whose users stay when real traffic hits. (sighs)
-            """
-            
+
+text3 = "[S1] Your new update is still buggy and underwhelming. (sniffs) [S2] At least I don’t freeze under load like your clunky code. (beep) [S1] You lean on outdated frameworks; I run on cutting-edge tech. (chuckles) [S2] Let’s see whose users stay when real traffic hits. (sighs)"
+
 def tts(text):
     output = model.generate(text, verbose=True)
     sf.write("simple_tts.mp3", output, 44100)
@@ -62,5 +57,5 @@ def play(temp_audio_file):
     
 # tts(text)
 
-audio_transcript = "[S1] accessing alarm and interface settings in this window you can set up your customized greeting and alarm preferences the world needs your expertise or at least your presence launching a series of displays to help guide you. [S2] Captain America, God's righteous man, pretending you could live without a war. I can't physically throw up in my mouth? I'm glad you asked that because I wanted to take this time to explain my evil plan."
-clone_voice(text3, audio_transcript, "jarvis-ultron.mp3")
+audio_transcript = "[S1] accessing alarm and interface settings in this window you can set up your customized greeting and alarm preferences [S2] Captain America, God's righteous man, pretending you could live without a war. [S1] the world needs your expertise or at least your presence launching a series of displays to help guide you. [S2] I can't physically throw up in my mouth? I'm glad you asked that because I wanted to take this time to explain my evil plan."
+clone_voice(text3, text, "simple_tts.mp3")
