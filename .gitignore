@@ -14,6 +14,7 @@ wheels/
 
 **/*.pth
 **/*.mp3
+!jarvis-cogman.mp3
 !example_prompt.mp3
 **/*.txt
 /model
