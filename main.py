@@ -55,7 +55,6 @@ def play(temp_audio_file):
 
     # os.remove(temp_audio_file)
     
-# tts(text)
-
-audio_transcript = "[S1] accessing alarm and interface settings in this window you can set up your customized greeting and alarm preferences [S2] Captain America, God's righteous man, pretending you could live without a war. [S1] the world needs your expertise or at least your presence launching a series of displays to help guide you. [S2] I can't physically throw up in my mouth? I'm glad you asked that because I wanted to take this time to explain my evil plan."
-clone_voice(text3, text, "simple_tts.mp3")
+# tts(text3)
+audio_transcript = "[S1] accessing alarm and interface settings in this window you can set up your customized greeting and alarm preferences [S2] No, he's going to die. I was making the moment more epic. Leprechauns are tiny, green, and Irish, and that is offensive. No, he's going to die. [S1] the world needs your expertise or at least your presence launching a series of displays to help guide you. [S2] Will explain everything if you'll kindly come with me. Yes, my lord, like making beds. Or cooking food."
+clone_voice(text, audio_transcript, "jarvis-cogman.mp3")
